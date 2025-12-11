@@ -20,3 +20,6 @@ ta
 
 schedule
 python-dotenv
+gunicorn
+
+
