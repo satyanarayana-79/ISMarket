@@ -13,7 +13,9 @@ from chartink import update_all
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-
+@app.route("/")
+def index():
+    return "ISMarket Technical Analysis is running successfully!"
 # ---------------------------------------------------------
 # CORS headers (extra safety for browsers)
 # ---------------------------------------------------------
@@ -537,3 +539,4 @@ if __name__ == "__main__":
     print("🚀 ISMarket running → http://127.0.0.1:8000")
     print("📘 Using DB folder:", os.path.join(BASE_DIR, "daily_dbs"))
     app.run(host="0.0.0.0", port=8000, debug=True)
+
